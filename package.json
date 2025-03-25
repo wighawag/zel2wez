@@ -1,0 +1,42 @@
+{
+  "name": "zellij2wez",
+  "version": "0.0.0",
+  "description": "Convert Zellij layout to WezTerm lua config",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "bin": "./dist/cli.js",
+  "devDependencies": {
+    "@types/node": "^22.13.13",
+    "as-soon": "^0.0.11",
+    "ldenv": "^0.3.12",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "dev": "as-soon -w src pnpm build",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write ."
+  },
+  "dependencies": {
+    "kdljs": "^0.3.0"
+  }
+}
