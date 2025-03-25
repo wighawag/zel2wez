@@ -1,5 +1,5 @@
 {
-  "name": "zellij2wez",
+  "name": "zel2wez",
   "version": "0.0.0",
   "description": "Convert Zellij layout to WezTerm lua config",
   "license": "MIT",
